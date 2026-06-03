@@ -65,10 +65,10 @@ public pickUpOrder(ArrayList<menuItems> items, String resturauntName, int orderI
     }
 
     // print the item total, service charge, and order total
-    System.out.println("Item Total: $" + itemTotal);
-    System.out.println("Service Charge (10%): $" + (itemTotal * 0.10));
+    System.out.println("Item Total: $" + String.format("%.2f", itemTotal));
+    System.out.println("Service Charge (10%): $" + String.format("%.2f", (itemTotal * 0.10)));
     System.out.println("--------------------------------------------");
-    System.out.println("Order Total: $" + calculatePrice());
+    System.out.println("Order Total: $" + String.format("%.2f", itemTotal + (itemTotal * 0.10)));
 
     // print the table number unique to dine in
     System.out.println("Pickup Time: " + pickUpTime);
